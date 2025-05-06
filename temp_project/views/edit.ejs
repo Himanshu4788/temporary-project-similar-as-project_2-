@@ -1,0 +1,18 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
+    <title>Document</title>
+</head>
+<body class=" bg-zinc-900 text-white" >
+    <a href="/see" style="color: blue; font-size: 13px;">See all user.</a>
+    <p>Enter user name</p>
+    <form  action="/update/<%= user._id %>" method="post">
+        <input class="block1  border-2 border-zinc-200   bg-transpanrent pl-2" value="<%= user.name%>" type="text" name="name" placeholder="name" >
+        <!-- <input class="block1  border-2 border-zinc-200   bg-transpanrent pl-2" type="text" name="name" placeholder="new_nmae" > -->
+        <input class="submit  rounded-lg bg-blue-500" type="submit" value="Create User" >
+    </form>
+</body>
+</html>

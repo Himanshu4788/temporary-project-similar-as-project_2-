@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="/style.css">
+    <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
+    <title>Document</title>
+</head>
+<body class="bg-zinc-900 text-white">
+
+    <a class="m-2" href="/" style="color: blue; font-size: 13px;">Back.</a>
+    <p class="m-2">User details</p>
+
+    <div class="m-2 ">
+            <% user.forEach(name => { %>
+                <div class="m-2">
+                    <input type="text" placeholder="name" value="<%= name.name %>">
+               
+                    <a type="text" style="color: blue; " href="/delete/<%= name._id %>" >delete</a>
+                    <a type="text" style="color: blue; " href="/edit/<%= name._id %>" >edit</a>
+                </div>
+            
+                  <!-- <input type="button"  value="<%= name.id%>>" > -->
+            <% }) %>
+        </div>
+   
+</body>
+</html> 
